@@ -1,0 +1,73 @@
+﻿@model YedideyChabad.Models.Child
+@using YedideyChabad.Code
+@{
+    ViewBag.Title = "Children list";
+    Layout = "~/Views/Shared/_Layout-Loggedin.cshtml";
+    Globals.SelectedChildFullName = Model.Name;
+}
+
+<table class="tabular-data">
+    <tr>
+        <td class="side-toolbar">
+            @Html.Partial("_Loggedin-Side-Menu", new YedideyChabad.ViewModels.SideMenu{Member = true, AllMembers = true, Children= true })
+        </td>
+        <td class="page-content">
+
+            @Html.Partial("_ActionsMenu", new YedideyChabad.ViewModels.ActionsMenu{ CollapseExpandDetails = true, UseruName = true , ShowChildBreadcrumb = true, ShowSubmit = true})
+
+            @using (Html.BeginForm()) {
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.Birthday_Jewish)
+    
+            <fieldset>
+                <div class="legend">
+                    <h4>פרטים אישיים</h4>
+                </div>
+
+                <div class="inputs default-visible">
+@*                    <div class="edit">
+                        <span class="icon-edit"></span>
+                        <span class="icon-cancel-edit"></span>
+                    </div>*@
+
+                    <div class="row">
+                        <div>
+                            <span>@Html.DisplayNameFor(model => model.Name):</span>            
+                            @Html.TextBoxFor(model => model.Name, new { disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </div>
+                        <div>
+                            <span>@Html.DisplayNameFor(model => model.Birthday_Greg):</span>
+                            @Html.TextBoxFor(model => model.Birthday_Greg, new { disabled = "disabled",@class="greg-date", @placeholder="שנה/יום/חודש", @related = "Birthday_Jewish"  })
+                            @Html.ValidationMessageFor(model => model.Birthday_Greg)   
+                        </div>        
+                        <div>
+                            <span>@Html.DisplayNameFor(model => model.Birthday_Jewish):</span>
+@*                            @Html.TextBoxFor(model => model.Birthday_Jewish, new { disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.Birthday_Jewish)  *@
+                            <label class="not-editable">@Model.Birthday_Jewish</label>                                     
+                        </div>
+                    </div>
+                    <!-- break row -->
+                    <div class="row">
+                        <div>
+                            <span>@Html.DisplayNameFor(model => model.Age):</span>
+                            @Html.TextBoxFor(model => model.Age, new { disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.Age)               
+                        </div>
+
+                        <div>
+                            <span>@Html.DisplayNameFor(model => model.Comments):</span>
+                            @Html.TextBoxFor(model => model.Comments, new { disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.Comments)               
+                        </div>
+
+                    </div>
+
+                </div>
+            </fieldset>
+            }
+
+        </td>
+    </tr>
+</table>

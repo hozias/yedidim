@@ -1,0 +1,34 @@
+﻿@model YedideyChabad.ViewModels.ActionsMenu
+@using YedideyChabad.Code
+<div class="actionsContainer">
+    
+            @if (Model.UseruName)
+            {                   
+                <div class="breadcrumbs">
+                    <b><i>@Globals.SelectedMemberFullName</i></b>
+                    @if(Model.ShowChildBreadcrumb){
+                        <b>>> <i>@Globals.SelectedChildFullName</i></b>
+                    }
+                </div>                                  
+            }                    
+
+
+            @if (Model.CollapseExpandDetails)
+            {                   
+                <div>
+                    <ul class="details-actions">
+                        <li><a href="" id="expandAll" class="ico-font-con icon-openall"></a></li>
+                        <li><a href="" id="collapseAll" class="ico-font-con icon-closeall"></a></li>
+
+                    </ul>
+                </div>
+            }                                    
+
+            @if (Model.ShowSubmit)
+            {
+                <div class="edit">
+                    <span class="icon-edit"></span>
+                    <span class="icon-cancel-edit"></span>
+                </div>
+            }    
+</div>
