@@ -1,0 +1,127 @@
+    <edmx:StorageModels>
+      <Schema Namespace="YedidimDBModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="YedidimDBModelStoreContainer">
+          <EntitySet Name="tblCategories" EntityType="YedidimDBModel.Store.tblCategories" store:Type="Tables" />
+          <EntitySet Name="tblChabadDays" EntityType="YedidimDBModel.Store.tblChabadDays" store:Type="Tables" />
+          <EntitySet Name="tblChildren" EntityType="YedidimDBModel.Store.tblChildren" store:Type="Tables" />
+          <EntitySet Name="tblEvents" EntityType="YedidimDBModel.Store.tblEvents" store:Type="Tables" />
+          <EntitySet Name="tblHolidays" EntityType="YedidimDBModel.Store.tblHolidays" store:Type="Tables" />
+          <EntitySet Name="tblYedid" EntityType="YedidimDBModel.Store.tblYedid" store:Type="Tables" />
+          <EntitySet Name="tblYedidActivities" EntityType="YedidimDBModel.Store.tblYedidActivities" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="tblCategories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="tblChabadDays">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="Date_Day" Type="smallint" Nullable="false" />
+          <Property Name="Date_Month" Type="smallint" Nullable="false" />
+          <Property Name="Commeny" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="Image_Path" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblChildren">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ChildName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChildBirthDateGreg" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChildBirthDateJewish" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChildAge" Type="decimal" Precision="53" />
+          <Property Name="MainID" Type="integer" />
+          <Property Name="ChildComments" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblEvents">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MainID" Type="integer" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Comments" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="EventID" Type="integer" Nullable="false" />
+          <Property Name="EventName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Date_Day" Type="int" Nullable="false" />
+          <Property Name="Date_Month" Type="int" Nullable="false" />
+          <Property Name="JDate_Year" Type="int" Nullable="false" />
+          <Property Name="JDate_Month" Type="int" Nullable="false" />
+          <Property Name="JDate_Day" Type="int" Nullable="false" />
+          <Property Name="FullJewishDate" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="FullGregDate" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ClassSubject" Type="nvarchar" MaxLength="100" />
+          <Property Name="ClassLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateInsert" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblHolidays">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="Image_Path" Type="nvarchar" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="tblYedid">
+          <Key>
+            <PropertyRef Name="MainID" />
+          </Key>
+          <Property Name="MainID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MainFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainGender" Type="integer" />
+          <Property Name="MainSonOf" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainFamilyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainBirthDateGreg" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainBirthDateJewish" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainCellularPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="MainWorkDetails" Type="nvarchar" />
+          <Property Name="MainWorkPosition" Type="nvarchar" MaxLength="100" />
+          <Property Name="MainHobby" Type="nvarchar" MaxLength="100" />
+          <Property Name="MainPersonalty" Type="nvarchar" />
+          <Property Name="MainComments" Type="nvarchar" />
+
+          <Property Name="PartnerFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerGender" Type="integer" />
+          <Property Name="PartnerMaidenName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerBirthDateGreg" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerBirthDateJewish" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerCellularPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerWorkDetails" Type="nvarchar" />
+          <Property Name="PartnerEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="PartnerWorkPosition" Type="nvarchar" MaxLength="100" />
+          <Property Name="PartnerHobby" Type="nvarchar" MaxLength="100" />
+          <Property Name="PartnerPersonalty" Type="nvarchar" />
+          <Property Name="PartnerComments" Type="nvarchar" />
+
+          <Property Name="FamilyMerigeDateGreg" Type="nvarchar" MaxLength="50" />
+          <Property Name="FamilyMerigeDateJewish" Type="nvarchar" MaxLength="50" />
+          <Property Name="FamilyNumOfChildren" Type="nvarchar" MaxLength="10" />
+          <Property Name="FamilyNumOfChildrenForActivities" Type="nvarchar" MaxLength="10" />
+          <Property Name="FamilyTradition" Type="nvarchar" MaxLength="50" />
+          <Property Name="FamilyComments" Type="nvarchar" />
+          <Property Name="AddressStreet" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="AddressEntrance" Type="nvarchar" MaxLength="10" />
+          <Property Name="AddressHomePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressEconomicStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressComments" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblYedidActivities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MainID" Type="integer" Nullable="false" />
+          <Property Name="CategoryID" Type="integer" Nullable="false" />
+          <Property Name="DateGreg" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="DateHebrew" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
