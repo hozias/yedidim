@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        <div class="user-name-account">
+            @User.Identity.Name, שלום
+        </div>
+        @using (Html.BeginForm("התנתק", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">התנתק</a>
+        }        
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("התחברות", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+=======
 ﻿@if (Request.IsAuthenticated) {
     <text>
         <div class="user-name-account">
@@ -13,3 +30,4 @@
         <li>@Html.ActionLink("התחברות", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
+>>>>>>> 0c8113f056bc7568261c5e7422df4fa1bb8b0ba5

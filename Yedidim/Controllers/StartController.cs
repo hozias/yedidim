@@ -30,11 +30,9 @@ namespace YedideyChabad.Controllers
         // GET: /Start/
         public ActionResult Index()
         {
-            //Globals.OwnerId = (int)Membership.GetUser().ProviderUserKey;            
-
-
-            //var a = Membership.GetUser(User.Identity.Name);
-
+            //TODO: need to get the loggen in user i a different way
+            MongoMembershipProvider m = new MongoMembershipProvider();
+            bool isvalidUser = m.ValidateUser(User.Identity.Name, "");
 
             return View();
         }
