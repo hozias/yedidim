@@ -1,0 +1,270 @@
+﻿@model Yedidim.Models.Yadid
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Yadid</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DescendantName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DescendantName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Birthday_Jewish)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Birthday_Jewish)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Birthday_Greg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Birthday_Greg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneCellular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneCellular)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PositionAtWork)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PositionAtWork)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Hobby)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Hobby)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Personalty)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Personalty)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MerigeDate_Greg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MerigeDate_Greg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MerigeDate_Jewish)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MerigeDate_Jewish)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumOfChildren)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumOfChildren)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumOfChildrenForActivities)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumOfChildrenForActivities)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tradition)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tradition)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FamilyComments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FamilyComments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_Number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Number)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_Entrance)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Entrance)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_EconomicStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_EconomicStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_Comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Home_Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerFirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerFirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerLastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerLastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerGender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerGender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerDescendantName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerDescendantName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerBirthday_Jewish)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerBirthday_Jewish)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerBirthday_Greg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerBirthday_Greg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerPhoneCellular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerPhoneCellular)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerPositionAtWork)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerPositionAtWork)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerHobby)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerHobby)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerPersonalty)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerPersonalty)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartnerComments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartnerComments)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
