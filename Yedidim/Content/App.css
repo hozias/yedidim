@@ -888,12 +888,6 @@ aside ul li {
 }
 /* login page */
 
-<<<<<<< HEAD
-=======
-#loginForm {
-  width: 55%;
-}
->>>>>>> 0c8113f056bc7568261c5e7422df4fa1bb8b0ba5
 #loginForm .validation-error {
   display: block;
   margin-left: 15px;
