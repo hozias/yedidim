@@ -1200,10 +1200,9 @@ tr.pager td {
   }
   .side-toolbar {
     width: 40px !important;
-    /*a{	
-  				span{float: right; display:none; }
-  			}*/
-  
+  }
+  .side-toolbar a span {
+    display: none;
   }
   .tabular-data tr th {
     padding-left: 10px !important;

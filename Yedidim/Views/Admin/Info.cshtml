@@ -1,0 +1,17 @@
+﻿@model YedideyChabad.Models.Info
+
+@{
+    ViewBag.Title = "Info";
+}
+
+
+<fieldset style="direction:rtl;">
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Users)  :  @Html.DisplayFor(model => model.Users)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Members) :  @Html.DisplayFor(model => model.Members)
+    </div>
+</fieldset>

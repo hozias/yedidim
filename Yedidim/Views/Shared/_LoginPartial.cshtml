@@ -3,7 +3,8 @@
         <div class="user-name-account">
             @User.Identity.Name, שלום
         </div>
-        @using (Html.BeginForm("התנתק", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
             @Html.AntiForgeryToken()
             <a href="javascript:document.getElementById('logoutForm').submit()">התנתק</a>
         }        
