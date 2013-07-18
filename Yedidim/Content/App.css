@@ -94,6 +94,13 @@ h5 a:active {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'typicons';
+  src: url('iconfonts/typicons.eot');
+  src: url('iconfonts/typicons.eot?#iefix') format('embedded-opentype'), url('iconfonts/typicons.woff') format('woff'), url('iconfonts/typicons.ttf') format('truetype'), url('iconfonts/typicons.svg#typicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: 'fontawesome';
@@ -183,7 +190,8 @@ h5 a:active {
   color: #ff7200;
 }
 .icon-group:before {
-  content: '\f0c0';
+  font-family: 'typicons';
+  content: '\e07c';
   font-size: 75px;
   color: #ff7200;
 }
@@ -1200,9 +1208,10 @@ tr.pager td {
   }
   .side-toolbar {
     width: 40px !important;
-  }
-  .side-toolbar a span {
-    display: none;
+    /*a{	
+  				span{float: right; display:none; }
+  			}*/
+  
   }
   .tabular-data tr th {
     padding-left: 10px !important;
