@@ -96,8 +96,8 @@ h5 a:active {
 }
 @font-face {
   font-family: 'typicons';
-  src: url('iconfonts/typicons.eot');
-  src: url('iconfonts/typicons.eot?#iefix') format('embedded-opentype'), url('iconfonts/typicons.woff') format('woff'), url('iconfonts/typicons.ttf') format('truetype'), url('iconfonts/typicons.svg#typicons') format('svg');
+  src: url('iconfonts/typicons.eot?31413622');
+  src: url('iconfonts/typicons.eot?31413622#iefix') format('embedded-opentype'), url('iconfonts/typicons.woff?31413622') format('woff'), url('iconfonts/typicons.ttf?31413622') format('truetype'), url('iconfonts/typicons.svg?31413622#typicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
