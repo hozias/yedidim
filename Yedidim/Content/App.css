@@ -103,7 +103,6 @@ h5 a:active {
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: 'fontawesome';
   font-style: normal;
   speak: none;
   font-weight: normal;

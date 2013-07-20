@@ -240,6 +240,7 @@
     <Content Include="Content\iconfonts\entypo.svg" />
     <Content Include="Content\iconfonts\fontawesome-webfont.svg" />
     <Content Include="Content\iconfonts\maki.svg" />
+    <Content Include="Content\iconfonts\typicons.svg" />
     <Content Include="Content\Lib\dotless.Compiler.exe" />
     <Content Include="Content\Lib\dotless.Core.dll" />
     <Content Include="Content\Lib\dotless.Core.pdb" />
@@ -313,13 +314,16 @@
     <Content Include="Content\iconfonts\fontawesome-webfont.eot" />
     <Content Include="Content\iconfonts\fontawesome-webfont.ttf" />
     <Content Include="Content\iconfonts\fontawesome-webfont.woff" />
-    <Content Include="Content\iconfonts\FontAwesome.otf" />
+    <Content Include="Content\iconfonts\fontawesome.otf" />
     <Content Include="Content\iconfonts\entypo.eot" />
     <Content Include="Content\iconfonts\entypo.ttf" />
     <Content Include="Content\iconfonts\entypo.woff" />
     <Content Include="Content\iconfonts\maki.eot" />
     <Content Include="Content\iconfonts\maki.ttf" />
     <Content Include="Content\iconfonts\maki.woff" />
+    <Content Include="Content\iconfonts\typicons.eot" />
+    <Content Include="Content\iconfonts\typicons.ttf" />
+    <Content Include="Content\iconfonts\typicons.woff" />
     <None Include="Properties\PublishProfiles\me.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="LICENSE.txt" />
